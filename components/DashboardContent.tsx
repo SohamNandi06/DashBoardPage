@@ -73,13 +73,13 @@ const DashboardContent: FC = () => {
         <h3 className="font-bold text-xl mb-15 text-black">Project Analytics</h3>
         <div className="flex justify-between items-end h-40">
           {[
-            { label: "S", height: 120, filled: false, dark: false},
-            { label: "M", height: 164, filled: true, dark:true},
+            { label: "S", height: 120, filled: false,value:"60%", dark: false},
+            { label: "M", height: 164, filled: true, value:"82%", dark:true},
             { label: "T", height: 148, filled: true, value: "74%", dark:false },
-            { label: "W", height: 180, filled: true, dark:true },
-            { label: "T", height: 180, filled: false, dark: false },
-            { label: "F", height: 100, filled: false,dark: false },
-            { label: "S", height: 140, filled: false, dark:false },
+            { label: "W", height: 180, filled: true, value:"90%",dark:true },
+            { label: "T", height: 180, filled: false, value:"90%",dark: false },
+            { label: "F", height: 100, filled: false,value:"50%",dark: false },
+            { label: "S", height: 140, filled: false, value:"70%",dark:false },
           ].map((bar, i) => (
             <div key={i} className="flex flex-col items-center gap-2 relative group">
               {bar.value && (
