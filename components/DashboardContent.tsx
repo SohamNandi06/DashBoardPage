@@ -66,13 +66,13 @@ const DashboardContent: FC = () => {
         <h3 className="font-bold text-xl mb-15">Project Analytics</h3>
         <div className="flex justify-between items-end h-40">
           {[
-            { label: "S", height: 120, filled: false },
-            { label: "M", height: 164, filled: true },
-            { label: "T", height: 148, filled: true, value: "74%" },
-            { label: "W", height: 180, filled: true },
-            { label: "T", height: 180, filled: false },
-            { label: "F", height: 100, filled: false },
-            { label: "S", height: 140, filled: false },
+            { label: "S", height: 120, filled: false, dark: false},
+            { label: "M", height: 164, filled: true, dark:true},
+            { label: "T", height: 148, filled: true, value: "74%", dark:false },
+            { label: "W", height: 180, filled: true, dark:true },
+            { label: "T", height: 180, filled: false, dark: false },
+            { label: "F", height: 100, filled: false,dark: false },
+            { label: "S", height: 140, filled: false, dark:false },
           ].map((bar, i) => (
             <div key={i} className="flex flex-col items-center gap-2 relative group">
               {bar.value && (
@@ -82,7 +82,7 @@ const DashboardContent: FC = () => {
               )}
               <div
                 className={`w-5 lg:w-15 rounded-4xl ${
-                  bar.filled ? "bg-green-600" : "bg-gray-200 border-2 border-dashed"
+                  bar.filled ? bar.dark ? "bg-green-900":"bg-green-600" : "bg-[url(/stripes3.jpg)] "
                 }`}
                 style={{ height: `${bar.height}px` }}
               />

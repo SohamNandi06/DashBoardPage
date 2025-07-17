@@ -14,7 +14,7 @@ const Layout = ({ children }: { children?: ReactNode }) => {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 
       {/* Right Section */}
-      <div className="flex-1 flex flex-col p-4 lg:p-6 mt-4 lg:mt-5">
+      <div className="flex-1 flex flex-col p-4 lg:p-6 mt-0 lg:mt-0">
         <Navbar onToggleSidebar={() => setSidebarOpen((prev) => !prev)} />
         <div className="mt-4">
           <DashboardContent />
