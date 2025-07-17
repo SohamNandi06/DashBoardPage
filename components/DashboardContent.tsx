@@ -8,13 +8,17 @@ const DashboardContent: FC = () => {
   return (
     <div className="bg-white rounded-lg">
     <div className="flex justify-between items-center px-4 mb-6">
+ <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6 mt-6 w-full">
+  {/* Left Side: Heading and Description */}
   <div>
-    <h1 className="text-3xl font-bold text-gray-900 mt-6">Dashboard</h1>
+    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Dashboard</h1>
     <p className="text-sm text-gray-500 mt-1">
       Plan, prioritize, and accomplish your tasks with ease.
     </p>
   </div>
-  <div className="flex gap-2">
+
+  {/* Right Side: Buttons */}
+  <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto md:ml-auto">
     <button className="bg-gradient-to-br from-green-800 to-green-600 text-white font-medium px-5 py-2 rounded-full text-sm shadow hover:opacity-90 transition">
       + Add Project
     </button>
@@ -22,6 +26,9 @@ const DashboardContent: FC = () => {
       Import Data
     </button>
   </div>
+</div>
+
+
 </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
       {/* Top Stats Cards */}
@@ -36,34 +43,34 @@ const DashboardContent: FC = () => {
 
       <div className="bg-white p-4 rounded-xl shadow hover:bg-gray-100">
         <div className="flex justify-between items-center text-gray-500">
-          <span className="font-semibold">Ended Projects</span>
+          <span className="font-semibold text-black">Ended Projects</span>
           <BsArrowUpRightCircle className="w-6 h-6" />
         </div>
-        <div className="text-3xl font-bold mt-2">10</div>
+        <div className="text-3xl text-black font-bold mt-2">10</div>
         <div className="text-xs mt-1 text-green-500">↑ Increased from last month</div>
       </div>
 
       <div className="bg-white p-4 rounded-xl shadow hover:bg-gray-100">
         <div className="flex justify-between items-center text-gray-500">
-          <span className="font-semibold">Running Projects</span>
+          <span className="font-semibold  text-black">Running Projects</span>
           <BsArrowUpRightCircle className="w-6 h-6" />
         </div>
-        <div className="text-3xl font-bold mt-2">12</div>
+        <div className="text-3xl font-bold mt-2  text-black">12</div>
         <div className="text-xs mt-1 text-green-500">↑ Increased from last month</div>
       </div>
 
       <div className="bg-white p-4 rounded-xl shadow hover:bg-gray-100">
         <div className="flex justify-between items-center text-gray-500">
-          <span className="font-semibold">Pending Project</span>
+          <span className="font-semibold  text-black">Pending Project</span>
           <BsArrowUpRightCircle className="w-6 h-6" />
         </div>
-        <div className="text-3xl font-bold mt-2">2</div>
+        <div className="text-3xl font-bold mt-2  text-black">2</div>
         <div className="text-xs mt-1 text-yellow-500">On Discuss</div>
       </div>
 
       {/* Project Analytics */}
       <div className="sm:col-span-2 lg:col-span-2 bg-white p-4 rounded-xl shadow hover:bg-gray-100">
-        <h3 className="font-bold text-xl mb-15">Project Analytics</h3>
+        <h3 className="font-bold text-xl mb-15 text-black">Project Analytics</h3>
         <div className="flex justify-between items-end h-40">
           {[
             { label: "S", height: 120, filled: false, dark: false},
@@ -136,7 +143,7 @@ const DashboardContent: FC = () => {
       {/* Team Collaboration */}
       <div className="sm:col-span-2 lg:col-span-2 bg-white p-4 rounded-xl shadow hover:bg-gray-100">
   <div className="flex justify-between items-center mb-4">
-    <h3 className="font-semibold">Team Collaboration</h3>
+    <h3 className="text-xl font-semibold">Team Collaboration</h3>
     <button className="text-sm text-green-900 font-medium border px-3 py-1 rounded-full hover:bg-green-100">
       + Add Member
     </button>
@@ -200,7 +207,7 @@ const DashboardContent: FC = () => {
 
       {/* Project Progress */}
  <div className="bg-white p-4 rounded-xl shadow flex flex-col items-center justify-center hover:bg-gray-100">
-  <h3 className="text-sm font-semibold text-gray-800 mb-4">Project Progress</h3>
+  <h3 className="text-xl font-semibold text-black mb-4 text-left">Project Progress</h3>
 
   {/* Semi-Circular Chart */}
   <div className="relative w-56 h-32 mb-6">
