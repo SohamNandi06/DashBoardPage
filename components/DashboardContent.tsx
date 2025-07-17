@@ -239,8 +239,11 @@ const DashboardContent: FC = () => {
     </svg>
 
     {/* Center Text */}
-    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800">
+    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-4xl font-bold text-gray-800">
       41%
+    </div>
+    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-sm  text-green-800">
+      Project ended
     </div>
   </div>
 
