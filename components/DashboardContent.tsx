@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Plus, Pause, Square } from "lucide-react";
+import { Plus,  } from "lucide-react";
 import { BsFillArrowUpRightCircleFill, BsArrowUpRightCircle } from "react-icons/bs";
 import { AiTwotoneVideoCamera } from "react-icons/ai";
 import Stopwatch from "./Stopwatch";
