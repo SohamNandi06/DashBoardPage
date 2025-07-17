@@ -143,7 +143,7 @@ const DashboardContent: FC = () => {
       {/* Team Collaboration */}
       <div className="sm:col-span-2 lg:col-span-2 bg-white p-4 rounded-xl shadow hover:bg-gray-100">
   <div className="flex justify-between items-center mb-4">
-    <h3 className="text-xl font-semibold">Team Collaboration</h3>
+    <h3 className="text-xl font-semibold text-black">Team Collaboration</h3>
     <button className="text-sm text-green-900 font-medium border px-3 py-1 rounded-full hover:bg-green-100">
       + Add Member
     </button>
@@ -187,7 +187,7 @@ const DashboardContent: FC = () => {
             className="w-10 h-10 rounded-full object-cover"
           />
           <div>
-            <div className="font-medium">{member.name}</div>
+            <div className="font-medium text-gray-800">{member.name}</div>
             <div className="text-xs text-gray-500">
               Working on{" "}
               <span className="font-semibold text-black">{member.task}</span>
